@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center">
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/schedule_content_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dialog_back">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/schedule_infoBar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/schedule_collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="250dp"
+                app:title="HELLO"
+                app:collapsedTitleTextAppearance="@style/fontFade"
+                app:contentScrim="@android:color/background_light"
+                app:expandedTitleTextAppearance="@style/fontShow"
+                app:expandedTitleGravity="center_horizontal|bottom"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:id="@+id/schedule_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pic51"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7" />
+
+                <View
+                    android:id="@+id/Block"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/content_background"
+                    app:layout_collapseMode="pin"/>
+                <android.support.v7.widget.Toolbar
+                    android:background="@drawable/content_toolbar_shape"
+                    android:id="@+id/schedule_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/schedule_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <WebView
+                android:id="@+id/schedule_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/schedule_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/schedule_content_card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-50dp"
+        android:src="@drawable/cancel"
+        app:backgroundTint="@color/colorPrimary" />
+</RelativeLayout>

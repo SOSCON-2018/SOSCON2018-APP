@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/schedule_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="#00343f"
+        app:tabIndicatorHeight="2dp"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Left" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Center" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Right" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tab5" />
+    </android.support.design.widget.TabLayout>
+</android.support.v7.widget.Toolbar>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1db0b8">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerInside"
+            android:layout_above="@+id/email"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/logo3"
+            android:background="@drawable/logo_background"/>
+        <AutoCompleteTextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/shape_round"
+            android:hint="email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp"
+            android:textCursorDrawable="@drawable/cursor_shape" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@id/email"
+            android:layout_below="@id/email"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_round"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textCursorDrawable="@drawable/cursor_shape" />
+
+        <Button
+            android:id="@+id/email_sign_in_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_ripple"
+            android:text="Log in"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
