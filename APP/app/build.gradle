@@ -5,13 +5,13 @@ android {
         release {
             keyAlias 'SOSCON'
             keyPassword '113meiyoumima'
-            storeFile file('C:/Users/tcy/mystore.jks')
+            storeFile file('C:/Users/soscon/mystore.jks')
             storePassword '113meiyoumima'
         }
     }
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.example.tcy.app"
+        applicationId "org.openingsource.soscon"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
